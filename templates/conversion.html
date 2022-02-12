@@ -14,7 +14,12 @@
   </head>
   <body>
 
-      <div class="container text-center mt-5">
+      <div class="container text-center my-5">
+            {% if '{{ error }}' %}
+                <div class="error">
+                    <p>{{ error }}</p>
+                </div>
+            {% endif %}
             <form action="" method="post">
                 {% csrf_token %}
                 <div>
@@ -30,22 +35,19 @@
             <div class="card mb-3 mx-auto" style="max-width: 60%;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="{% static 'calConversionApp/img/onigiri.jpeg' %}" alt="" width="250" height="150">
+                        <img src="{% static 'calConversionApp/img/onigiri.jpg' %}" alt="" width="250" height="150">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title">おにぎり {{ onigiri }} 個分</h5>
-                            <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
-                            <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                         </div>
                     </div>
                 </div>
             </div>
-
             <div class="card mb-3 mx-auto" style="max-width: 60%;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="{% static 'calConversionApp/img/gasoline.jpeg' %}" alt="" width="250" height="150">
+                        <img src="{% static 'calConversionApp/img/gasoline.jpg' %}" alt="" width="250" height="150">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
@@ -54,7 +56,42 @@
                     </div>
                 </div>
             </div>
-
+            <div class="card mb-3 mx-auto" style="max-width: 60%;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{% static 'calConversionApp/img/banana.jpg' %}" alt="" width="250" height="150">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">バナナ {{ banana }} 本分</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3 mx-auto" style="max-width: 60%;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{% static 'calConversionApp/img/syokupan.jpg' %}" alt="" width="250" height="150">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">食パン {{ syokupan }} 枚分（6枚切）</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3 mx-auto" style="max-width: 60%;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{% static 'calConversionApp/img/gyunyu.jpg' %}" alt="" width="250" height="150">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">牛乳 {{ gyunyu }} L分</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
       </div>
 
 
